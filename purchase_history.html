@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+        
+        function submitReview() {
+            var reviewContent = document.querySelector('.review-form textarea').value;
+            var reviewsContainer = document.querySelector('.reviews-container');
+
+            // 動態生成評價卡片
+            var reviewCard = document.createElement('div');
+            reviewCard.className = 'review';
+            reviewCard.innerHTML = '<p>評價日期: ' + getCurrentDate() + '</p>' +
+                                   '<p>評價內容: ' + reviewContent + '</p>';
+
+            // 將評價卡片插入到評價顯示容器中
+            reviewsContainer.appendChild(reviewCard);
+        }
+
+        function getCurrentDate() {
+            var currentDate = new Date();
+            return currentDate.toISOString().split('T')[0];
+        }
+
+        function rateProduct(star) {
+            // 根據點擊的星星，設定評分
+            const stars = document.querySelectorAll('.stars');
+            stars.forEach(s => s.style.color = 'gray');
+            star.style.color = '#FFD700';
+        }
+
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="buysite.html"><img src="img/logo.png"><h1>小魔女の解憂鋪</h1></a></li>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <a href="meber.html"><div class="user-area">
+                <div class="user-buttons">
+                    <li><img src="img/user.png" alt="會員專區"></li>
+                </div>
+            </a>
+            <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            </div>
+        </ul>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="buysite.html">首頁</a></li>
+                <li><a href="QA.html">Q&A</a></li>
+                <li><a href="product_superhero.html">商品</a>
+                    <ul class="sub-menu">
+                        <li><a href="product_superhero.html">Superhero 專區</a></li>
+                        <li><a href="product_memories.html">Memories 專區</a></li>
+                        <li><a href="product_gogogo.html">趴趴走 專區</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="">
+
+    </div>
+    <div class="purchase-history-container">
+        <div class="purchase-card">
+            <h3>訂單編號: #12345</h3>
+            <p>商品名稱: 飛行蝴蝶結 A</p>
+            <p>購買日期: 2024-01-06</p>
+            <p>單價: $250.00</p>
+            <p>數量: 2</p>
+            <p>總金額: $250.00</p>
+
+            <!-- 評價表單 -->
+            <div class="stars" onclick="rateProduct(this)">★</div>
+            <div class="stars" onclick="rateProduct(this)">★</div>
+            <div class="stars" onclick="rateProduct(this)">★</div>
+            <div class="stars" onclick="rateProduct(this)">★</div>
+            <div class="stars" onclick="rateProduct(this)">★</div>
+            <div class="review">
+            <div class="review-form">
+                <textarea placeholder="請輸入評價內容"></textarea>
+                <button onclick="submitReview()">提交評價</button>
+            </div>
+
+            <!-- 評價顯示部分 -->
+            <div class="reviews-container">
+                <div class="review">
+                    <p>評價日期: 2024-01-07</p>
+                    <p>評價內容: 很喜歡這個商品，性價比很高！</p>
+                </div>
+                <!-- 根據評價數量動態生成多個 .review -->
+            </div>
+        </div>
+
+        <!-- 根據購買紀錄數量動態生成多個 .purchase-card -->
+
+        <div class="total-price">總購買金額: $250.00</div>
+    </div>
+
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+    
+</body>
+</html>

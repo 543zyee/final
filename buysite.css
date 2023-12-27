@@ -1,0 +1,352 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 120px 0 0 0;
+}
+
+header {
+    position: fixed;
+    width: 90vw;
+    top: 0;
+    z-index: 101;
+
+    background-color: #BD93BD;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.header-title-div {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    color: #925E78;
+    padding-left: 30px;
+}
+
+.header-logo {
+    border-radius: 50px;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header img {
+    width: 100px; 
+    height: auto;
+}
+
+nav {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+ul ,
+li,
+a
+{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.search-bar {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+input,
+textarea {
+    margin-left: auto;
+    margin-bottom: 0;
+    border: 0px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #925E78;
+    color: #fff;
+    margin: 10px;
+    padding: 8px 16px;
+    display: flex;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    padding: 29.5px 13.2px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: -200px;
+    background-color: #925E78;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+@media screen  {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 120px;
+        right: 0px;
+        width: 20%;
+        background-color: #925E78;
+        text-align: right;
+        z-index: 100;
+    }
+
+    .active-menu-bg {
+        display: none;
+        position: fixed;
+        top: 120px;
+        right: 0px;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 99;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    nav.active + .active-menu-bg {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li:hover .sub-menu {
+        display: block;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.store-description,
+.recommended-products{
+    background-color:#FFC0BD;
+    color:#925E78 ;
+    padding: 30px 20px;
+    border-radius: 30px;
+}
+
+.store-description{
+    display: flex;
+    align-items: center;
+    margin: 10% 5% 1% 5%;
+}
+
+.recommended-products {
+    margin: 2% 5% 15% 5%;
+}
+
+footer {
+    background-color: #BD93BD;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1{
+    text-align: left;
+    margin: 0;
+}
+    
+hr{
+    border-color: #925E78;
+}
+
+.page-title {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    background: #925E78;
+    color: white;
+    padding: 20px 0;
+}
+
+.pink-frame {
+    background: #FFC0BD;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.pink-frame > h1 {
+    color: white;
+    border-bottom: 3px solid #925E78;
+    padding-bottom: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.pink-frame-submit {
+    margin: 0;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 32px;
+    display: block;
+    align-self: center;
+    width: fit-content;
+}
+
+.login-container,
+.signin-container,
+.member-info {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container > div {
+    width: 30%;
+}
+
+.signin-container > div,
+.member-info > div {
+    width: 50%;
+    margin-bottom: 180px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+form > span {
+    display: inline-flex;
+    width: 100%;
+}
+
+form > span > label > h1 {
+    color: white;
+}
+
+form > span > input,
+form > span > textarea {
+    flex: auto;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+.description-pho{
+    float: left;
+    height: 200px;
+    display:block;
+    margin: auto;
+}
+
+.store-description-content {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.store-description-content > h1 {
+    padding-top: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.recommended-products > h1 {
+    font-size: 32px;
+}
+
+
+/* 圖片輪播 */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slides img {
+    width: 100%;
+    display: none;
+  }
+  
+  .slides img:first-child {
+    display: block;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }

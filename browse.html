@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="buysite.html"><img src="img/logo.png"><h1>小魔女の解憂鋪</h1></a></li>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <a href="meber.html"><div class="user-area">
+                <div class="user-buttons">
+                    <li><img src="img/user.png" alt="會員專區"></li>
+                </div>
+            </a>
+            <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            </div>
+        </ul>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="buysite.html">首頁</a></li>
+                <li><a href="QA.html">Q&A</a></li>
+                <li><a href="product_superhero.html">商品</a>
+                    <ul class="sub-menu">
+                        <li><a href="product_superhero.html">Superhero 專區</a></li>
+                        <li><a href="product_memories.html">Memories 專區</a></li>
+                        <li><a href="product_gogogo.html">趴趴走 專區</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="browse-history">
+        <h1>瀏覽紀錄</h1>
+        <hr>
+        <body>
+
+            <div class="browse-history-container">
+                <div class="history-item">
+                    <img src="img/time.jpg">
+                    <div class="product">時空衣櫥</div>
+                    <div class="date">瀏覽日期: 2024-01-01</div>
+                </div>
+        
+                <div class="history-item">
+                    <img src="img/invisible .jpg">
+                    <div class="product">透明雨衣</div>
+                    <div class="date">瀏覽日期: 2024-01-02</div>
+                </div>
+        
+            </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+    
+</body>
+</html>

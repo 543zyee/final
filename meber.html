@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-title-div">
+            <span class="header-logo">
+                <img src="img/logo.png">
+            </span>
+            <h1 class="header-title">小魔女の解憂鋪</h1>
+        </div>
+            
+        <ul>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <div class="user-area">
+                <div class="user-buttons">
+                    <li><img src="img/user.png" alt="會員專區"></li>
+                </div>
+                <li><img src="img/bag.png" alt="購物袋"></li>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <li >&#9776;</li>
+                </div>
+            </div>
+        </ul>
+        <nav id="main-menu">
+            <h2><a href="buysite.html">首頁</a></h2>
+            <h2><a href="#">Q&A</a></h2>
+            <h2><a href="#">商品</a></h2>
+            <h3><a href="#">Superhero 專區</a></h3>
+            <h3><a href="#">Memories 專區</a></h3>
+            <h3><a href="#">趴趴走 專區</a></h3>
+        </nav>
+        <div class="active-menu-bg"></div>
+    </header>
+
+
+    <!-- <header>
+        <h1>會員專區</h1>
+        <nav>
+            <ul>
+                <li><a href="#member-info">會員資料編輯</a></li>
+                <li><a href="#order-status">訂單狀態</a></li>
+                <li><a href="#browse-history">瀏覽紀錄</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <h1 class="page-title"> 
+        <a href="meber.html">會員資料編輯&nbsp</a>
+
+        <a href="">&nbsp歷史購買紀錄</a>
+    </h1>
+
+    <div class="member-info">
+        <div class="pink-frame">
+            <h1>會員資料編輯</h1>
+
+            <div class="original-info">
+
+                    <label for="username"><h1>帳號：</h1></label>
+
+                    <label for="password"><h1>密碼：</h1></label>
+
+                    <label for="name"><h1>姓名：</h1></label>
+
+                    <label for="phone"><h1>電話：</h1></label>
+
+                    <label for="address"><h1>住址：</h1></label>
+
+            </div>
+
+            <form>
+
+                <span>
+                    <label for="name"><h1>姓名：</h1></label>
+                    <input type="text" id="name" name="name">
+                </span>
+
+                <span>
+                    <label for="phone"><h1>電話：</h1></label>
+                    <input type="tel" id="phone" name="phone">
+                </span>
+
+                <span>
+                    <label for="address"><h1>住址：</h1></label>
+                    <textarea id="address" name="address"></textarea>
+                </span>
+
+                <span>
+                    <label for="current-password"><h1>目前密碼：</h1></label>
+                    <input type="password" id="current-password" name="current-password">
+                </span>
+
+                <span>
+                    <label for="new-password"><h1>新密碼：</h1></label>
+                    <input type="password" id="new-password" name="new-password">
+                </span>
+
+                <span>
+                    <label for="confirm-password"><h1>確認新密碼：</h1></label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                </span>
+
+                <button type="submit" class="pink-frame-submit">儲存變更</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+
+</body>
+</html>

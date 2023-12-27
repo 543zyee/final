@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-title-div">
+            <span class="header-logo">
+                <img src="img/logo.png">
+            </span>
+            <h1 class="header-title">小魔女の解憂鋪</h1>
+        </div>
+            
+        <ul>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <div class="user-area">
+                <div class="user-buttons">
+                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
+                </div>
+                <li><img src="img/bag.png" alt="購物袋"></li>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <li >&#9776;</li>
+                </div>
+            </div>
+        </ul>
+        <nav id="main-menu">
+            <h2><a href="buysite.html">首頁</a></h2>
+            <h2><a href="QA.html">Q&A</a></h2>
+            <h2><a href="product_superhero.html">商品</a></h2>
+            <h3><a href="product_superhero.html">Superhero 專區</a></h3>
+            <h3><a href="product_memories.html">Memories 專區</a></h3>
+            <h3><a href="product_gogogo.html">趴趴走 專區</a></h3>
+        </nav>
+        <div class="active-menu-bg"></div>
+    </header>
+
+    <h1 class="page-title">
+        <a href="#">Q & A</a>
+    </h1>
+
+    <div class="QA">
+        <section class="qa-frame pink-frame">
+            <h2 class="ques">Q: 商品大約何時送達?</h2>
+            <h2 class="ans">A: 本公司配有24h的魔法運送使，下單後一個星期內隨時都有可能送到，還請多多留意!</h2>
+            <h2 class="ques">Q: 商品若有損壞怎麼辦?</h2>
+            <h2 class="ans">A: 請盡速聯繫我們，讓我們檢討並改進各位的消費體驗</h2>
+            <h2 class="ques">Q: 商品使用效果不好怎辦?</h2>
+            <h2 class="ans">A: 商品效果會因人而異，購買前請詳閱商品說明，售出後不因喜好退換貨。</h2>
+        </section>
+    </div>
+        
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+
+</body>
+
+</html>

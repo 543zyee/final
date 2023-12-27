@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-title-div">
+            <span class="header-logo">
+                <img src="img/logo.png">
+            </span>
+            <h1 class="header-title">小魔女の解憂鋪</h1>
+        </div>
+            
+        <ul>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <div class="user-area">
+                <div class="user-buttons">
+                    <li><img src="img/user.png" alt="會員專區"></li>
+                </div>
+                <li><img src="img/bag.png" alt="購物袋"></li>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <li >&#9776;</li>
+                </div>
+            </div>
+        </ul>
+        <nav id="main-menu">
+            <h2><a href="buysite.html">首頁</a></h2>
+            <h2><a href="#">Q&A</a></h2>
+            <h2><a href="#">商品</a></h2>
+            <h3><a href="#">Superhero 專區</a></h3>
+            <h3><a href="#">Memories 專區</a></h3>
+            <h3><a href="#">趴趴走 專區</a></h3>
+        </nav>
+        <div class="active-menu-bg"></div>
+    </header>
+
+    <h1 class="page-title"> <a href="login.html">會員登入&nbsp</a> | <a href="signin.html">&nbsp會員註冊</a></h1>
+    
+    <div class="login-container">
+        <div class="pink-frame">
+            <h1>會員登入</h1>
+
+            <form>
+                <span>
+                    <label for="username"><h1>帳號：</h1></label>
+                    <input type="text" id="username" name="username" required><br>
+                </span>
+
+                <span>
+                    <label for="password"><h1>密碼：</h1></label>
+                    <input type="password" id="password" name="password" required><br>
+                </span>
+
+                <button type="submit" class="pink-frame-submit">登入</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buysite.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("active");
+            console.log("Menu Toggled");
+        }
+    </script>
+    
+    <title>小魔女の解憂鋪</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="buysite.html"><img src="img/logo.png"><h1>小魔女の解憂鋪</h1></a></li>
+            <div class="search-bar">
+                <li><img src="img/search.png"></li>
+            </div>
+            <a href="meber.html"><div class="user-area">
+                <div class="user-buttons">
+                    <li><img src="img/user.png" alt="會員專區"></li>
+                </div>
+            </a>
+            <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            </div>
+        </ul>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="buysite.html">首頁</a></li>
+                <li><a href="QA.html">Q&A</a></li>
+                <li><a href="product_superhero.html">商品</a>
+                    <ul class="sub-menu">
+                        <li><a href="product_superhero.html">Superhero 專區</a></li>
+                        <li><a href="product_memories.html">Memories 專區</a></li>
+                        <li><a href="product_gogogo.html">趴趴走 專區</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="product-list-container">
+        <div class="product">
+            <img src="img/forget.jpg" alt="忘憂香水">
+            <h3>忘憂香水</h3>
+            <p>
+                薰衣草加上薄荷的香味，<br>
+                配上精心調製的忘憂精靈草，<br>
+                讓你一噴上就能忘記所有煩惱ก็ʕ•͡ᴥ•ʔ ก้<br>
+                （這也是本店的招牌熱賣商品！）<br>
+            </p>
+            <p>價格: $250.00</p>
+            <p>庫存: 50</p>
+            <button class="add-to-cart-button">加入購物車</button>
+        </div>
+
+        <div class="product">
+            <img src="img/time.jpg" alt="時空衣櫥">
+            <h3>時空衣櫥</h3>
+            <p>
+                想知道下一期大樂透號碼是多少嗎？<br>
+                想知道一百年後外星人會不會佔領地球嗎？<br>
+                時空衣櫥會把你帶到你所想的某時某地 ！(✪ω✪)<br>
+                （注：請將逃生設備以及糧食都帶在身邊，<br>
+                以免造成時空適應不良的情況<br>
+            </p>
+            <p>價格: $250.00</p>
+            <p>庫存: 30</p>
+            <button class="add-to-cart-button">加入購物車</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 聯繫我們<br>
+            小魔女道具體驗所有限公司<br>
+            電話:0123456789<br>
+            電郵:01234.45689@gmail.com
+        </p>
+    </footer>
+    
+</body>
+</html>
