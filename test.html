@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="test.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 假設這是歷史購物清單的一個商品項目 -->
+<div class="purchase-item">
+    <h3>商品名稱</h3>
+    <!-- 其他商品資訊 -->
+    <!-- 用戶評價及評論的區域 -->
+    <div class="review-section" id="review-section">
+        <!-- 這是用戶已評價及評論的內容 -->
+        <p>評價：<span id="rating">5</span>星</p>
+        <p>評論：這是一個很棒的商品！</p>
+    </div>
+    <!-- 用戶評價及評論的輸入板塊 -->
+    <div class="review-input" id="review-input" style="display: none;">
+        <label for="star-rating">評價：</label>
+        <select id="star-rating" onchange="updateStarRating()">
+            
+            <div class="star-rating" id="star-rating">
+                <span class="star" onclick="setRating(1)">&#9733;</span>
+                <span class="star" onclick="setRating(2)">&#9733;</span>
+                <span class="star" onclick="setRating(3)">&#9733;</span>
+                <span class="star" onclick="setRating(4)">&#9733;</span>
+                <span class="star" onclick="setRating(5)">&#9733;</span>
+            </div>
+            
+        </select>
+        <label for="comment">評論：</label>
+        <textarea id="comment"></textarea>
+        <button onclick="submitReview()">提交評價</button>
+    </div>
+</div>
+</body>
+</html>
