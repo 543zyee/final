@@ -4,90 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="buysite.css">
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("main-menu");
-            menu.classList.toggle("active");
-            console.log("Menu Toggled");
-        }
-    </script>
-    
+    <script src="buysite.js"></script>
     <title>小魔女の解憂鋪</title>
 </head>
 
 <body>
     <header>
+        <div class="header-title-div">
+            <span class="header-logo">
+                <img src="img/logo.png">
+            </span>
+            <h1 class="header-title">小魔女の解憂鋪</h1>
+        </div>
+            
         <ul>
-            <li><a href="buysite.html"><img src="img/logo.png"><h1>小魔女の解憂鋪</h1></a></li>
             <div class="search-bar">
                 <li><img src="img/search.png"></li>
             </div>
-            <a href="meber.html"><div class="user-area">
+            <div class="user-area">
                 <div class="user-buttons">
-                    <li><img src="img/user.png" alt="會員專區"></li>
+                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
                 </div>
-            </a>
-            <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
-                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+                <div class="buybag-buttons">
+                    <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                </div>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <li >&#9776;</li>
+                </div>
             </div>
         </ul>
-
         <nav id="main-menu">
-            <ul>
-                <li><a href="buysite.html">首頁</a></li>
-                <li><a href="QA.html">Q&A</a></li>
-                <li><a href="product_superhero.html">商品</a>
-                    <ul class="sub-menu">
-                        <li><a href="product_superhero.html">Superhero 專區</a></li>
-                        <li><a href="product_memories.html">Memories 專區</a></li>
-                        <li><a href="product_gogogo.html">趴趴走 專區</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <h2><a href="buysite.html">首頁</a></h2>
+            <h2><a href="QA.html">Q&A</a></h2>
+            <h2><a href="product_superhero.html">商品</a></h2>
+            <h3><a href="product_superhero.html">Superhero 專區</a></h3>
+            <h3><a href="product_memories.html">Memories 專區</a></h3>
+            <h3><a href="product_gogogo.html">趴趴走 專區</a></h3>
         </nav>
-
+        <div class="active-menu-bg"></div>
     </header>
 
     <div class="product-list-container">
-        <div class="product">
-            <img src="img/invisible .jpg" alt="透明雨衣">
-            <h3>透明雨衣</h3>
-            <p>
-                被施了魔法的隱形雨衣，<br>
-                可以讓穿著的地方保持透明~✧<br>
-                （註：請注意使用時盡量不要被發現破綻<br>
-                以免當上明日的靈異事件頭版新聞的主角）<br>
-            </p>
-            <p>價格: $250.00</p>
-            <p>庫存: 50</p>
-            <button class="add-to-cart-button">加入購物車</button>
+
+        <div class="product-list-title-div">
+            <h1 class="product-list-title">SUPERHERO 專區</h1>
         </div>
 
-        <div class="product">
+        <div class="product product-card">
+            <img src="img/invisible.jpg" alt="透明雨衣">
+
+            <div class="product-details">
+                <p class="product-title">透明雨衣</p>
+                <p class="product-content">
+                    被施了魔法的隱形雨衣，<br>
+                    可以讓穿著的地方保持透明~✧<br>
+                    （註：請注意使用時盡量不要被發現破綻<br>
+                    以免當上明日的靈異事件頭版新聞的主角）<br>
+                </p>
+                <div class="product-subinfo">
+                    <span class="price-storage">
+                        <p>$250.00</p>
+                        <p>（庫存: 50）</p>
+                    </span>
+                    <button class="add-to-cart-button">加入購物車</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product product-card">
             <img src="img/energy.jpg" alt="大力蘑菇">
-            <h3>大力蘑菇</h3>
-            <p>
-                想跟神力女超人和浩克一樣變成大力士嗎？<br>
-                吃下這個大力蘑菇，<br>
-                就可以舉起你原本力量×10000倍的物品！٩(ˊᗜˋ )و<br>
-            </p>
-            <p>價格: $250.00</p>
-            <p>庫存: 30</p>
-            <button class="add-to-cart-button">加入購物車</button>
+            
+            <div class="product-details">
+                <p class="product-title">大力蘑菇</p>
+                <p class="product-content">
+                    想跟神力女超人和浩克一樣變成大力士嗎？<br>
+                    吃下這個大力蘑菇，<br>
+                    就可以舉起你原本力量×10000倍的物品！٩(ˊᗜˋ )و<br>
+                </p>
+                <div class="product-subinfo">
+                    <span class="price-storage">
+                        <p>$250.00</p>
+                        <p>（庫存: 30）</p>
+                    </span>
+                    <button class="add-to-cart-button">加入購物車</button>
+                </div>
+            </div>
         </div>
 
-        <div class="product">
+        <div class="product product-card">
             <img src="img/diving.jpg" alt="潛水口香糖">
-            <h3>潛水口香糖</h3>
-            <p>
-                有汽水、可樂、葡萄口味的綜合包，<br>
-                可以潛入水底呼吸一小時的！<br>
-                （注：請注意時間，<br>
-                以免造成溺水的生命安全疑慮(✘Д✘๑ )<br>
-            </p>
-            <p>價格: $250.00</p>
-            <p>庫存: 30</p>
-            <button class="add-to-cart-button">加入購物車</button>
+            
+            <div class="product-details">
+                <p class="product-title">潛水口香糖</p>
+                <p class="product-content">
+                    有汽水、可樂、葡萄口味的綜合包，<br>
+                    可以潛入水底呼吸一小時的！<br>
+                    （注：請注意時間，<br>
+                    以免造成溺水的生命安全疑慮(✘Д✘๑ )<br>
+                </p>
+                <div class="product-subinfo">
+                    <span class="price-storage">
+                        <p>$250.00</p>
+                        <p>（庫存: 30）</p>
+                    </span>
+                    <button class="add-to-cart-button">加入購物車</button>
+                </div>
+            </div>
         </div>
 
     </div>

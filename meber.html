@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="buysite.css">
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("main-menu");
-            menu.classList.toggle("active");
-            console.log("Menu Toggled");
-        }
-    </script>
-    
+    <script src="buysite.js"></script>
     <title>小魔女の解憂鋪</title>
 </head>
 
@@ -30,9 +23,13 @@
             </div>
             <div class="user-area">
                 <div class="user-buttons">
-                    <li><img src="img/user.png" alt="會員專區"></li>
+                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
                 </div>
-                <li><img src="img/bag.png" alt="購物袋"></li>
+
+                <div class="buybag-buttons">
+                    <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                </div>
+
                 <div class="menu-icon" onclick="toggleMenu()">
                     <li >&#9776;</li>
                 </div>
@@ -40,53 +37,54 @@
         </ul>
         <nav id="main-menu">
             <h2><a href="buysite.html">首頁</a></h2>
-            <h2><a href="#">Q&A</a></h2>
-            <h2><a href="#">商品</a></h2>
-            <h3><a href="#">Superhero 專區</a></h3>
-            <h3><a href="#">Memories 專區</a></h3>
-            <h3><a href="#">趴趴走 專區</a></h3>
+            <h2><a href="QA.html">Q&A</a></h2>
+            <h2><a href="product_superhero.html">商品</a></h2>
+            <h3><a href="product_superhero.html">Superhero 專區</a></h3>
+            <h3><a href="product_memories.html">Memories 專區</a></h3>
+            <h3><a href="product_gogogo.html">趴趴走 專區</a></h3>
         </nav>
         <div class="active-menu-bg"></div>
     </header>
 
-
-    <!-- <header>
-        <h1>會員專區</h1>
-        <nav>
-            <ul>
-                <li><a href="#member-info">會員資料編輯</a></li>
-                <li><a href="#order-status">訂單狀態</a></li>
-                <li><a href="#browse-history">瀏覽紀錄</a></li>
-            </ul>
-        </nav>
-    </header> -->
-
     <h1 class="page-title"> 
-        <a href="meber.html">會員資料編輯&nbsp</a>
-
-        <a href="">&nbsp歷史購買紀錄&nbsp</a>
-
-        <li><a href="">瀏覽紀錄</a></li>
+        <a href="meber.html" class="title-active">會員資料編輯</a>
+        <a href="purchase_history.html">歷史購買紀錄</a>
+        <a href="browse.html">瀏覽紀錄</a>
     </h1>
 
-
     <div class="member-info">
-        <div class="pink-frame">
-            <h1>會員資料編輯</h1>
+
+        <div class="pink-frame member-original">
+            <h1>會員資料</h1>
 
             <div class="original-info">
 
-                    <label for="username"><h1>帳號：</h1></label>
+                <span>
+                    <label for="username"><h1>帳號：<span class="origin-username">XXX</span></h1></label>
+                </span>
 
-                    <label for="password"><h1>密碼：</h1></label>
+                <span>
+                    <label for="password"><h1>密碼：<span class="origin-password">XXX</span></h1></label>
+                </span>
 
-                    <label for="name"><h1>姓名：</h1></label>
+                <span>
+                    <label for="name"><h1>姓名：<span class="origin-name">XXX</span></h1></label>
+                </span>
 
-                    <label for="phone"><h1>電話：</h1></label>
+                <span>
+                    <label for="phone"><h1>電話：<span class="origin-phone">XXX</span></h1></label>
+                </span>
 
-                    <label for="address"><h1>住址：</h1></label>
+                <span>
+                    <label for="address"><h1>住址：<span class="origin-address">XXX</span></h1></label>
+                </span>
+
 
             </div>
+        </div>
+
+        <div class="pink-frame">
+            <h1>會員資料編輯</h1>
 
             <form>
 
@@ -120,7 +118,7 @@
                     <input type="password" id="confirm-password" name="confirm-password">
                 </span>
 
-                <button type="submit" class="pink-frame-submit">儲存變更</button>
+                <button type="submit" class="pink-frame-submit">確定</button>
             </form>
         </div>
     </div>

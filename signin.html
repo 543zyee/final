@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="buysite.css">
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("main-menu");
-            menu.classList.toggle("active");
-            console.log("Menu Toggled");
-        }
-
-
-    </script>
-    
+    <script src="buysite.js"></script>
     <title>小魔女の解憂鋪</title>
 </head>
 
@@ -32,9 +23,13 @@
             </div>
             <div class="user-area">
                 <div class="user-buttons">
-                    <li><img src="img/user.png" alt="會員專區"></li>
+                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
                 </div>
-                <li><img src="img/bag.png" alt="購物袋"></li>
+
+                <div class="buybag-buttons">
+                    <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                </div>
+
                 <div class="menu-icon" onclick="toggleMenu()">
                     <li >&#9776;</li>
                 </div>
@@ -42,20 +37,23 @@
         </ul>
         <nav id="main-menu">
             <h2><a href="buysite.html">首頁</a></h2>
-            <h2><a href="#">Q&A</a></h2>
-            <h2><a href="#">商品</a></h2>
-            <h3><a href="#">Superhero 專區</a></h3>
-            <h3><a href="#">Memories 專區</a></h3>
-            <h3><a href="#">趴趴走 專區</a></h3>
+            <h2><a href="QA.html">Q&A</a></h2>
+            <h2><a href="product_superhero.html">商品</a></h2>
+            <h3><a href="product_superhero.html">Superhero 專區</a></h3>
+            <h3><a href="product_memories.html">Memories 專區</a></h3>
+            <h3><a href="product_gogogo.html">趴趴走 專區</a></h3>
         </nav>
         <div class="active-menu-bg"></div>
     </header>
 
-    <h1 class="page-title"> <a href="login.html">會員登入&nbsp</a> / <a href="signin.html">&nbsp會員註冊</a></h1>
+    <h1 class="page-title">
+        <a href="login.html">會員登入</a>
+        <a href="signin.html" class="title-active">會員註冊</a>
+    </h1>
     
     <div class="signin-container">
         <div class="pink-frame">
-            <h1>會員註冊</h1>
+            <h1>會員資料註冊</h1>
 
             <form>
                 <span>
