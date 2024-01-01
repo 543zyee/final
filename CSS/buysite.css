@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 120px 0 0 0;
+    margin: 150px 0 0 0;
 }
 
 header {
     position: fixed;
     width: 90vw;
     top: 0;
+    transition: transform 0.3s ease-in-out;
     z-index: 101;
 
     background-color: #BD93BD;
@@ -188,6 +189,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: transform 0.3s ease-in-out
 }
 
 h1{
@@ -213,9 +215,54 @@ hr{
     margin: 0 10px;
 }
 
+.page-subtitle {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFC0BD;
+    color: white;
+    padding: 10px 0;
+}
+
+.page-subtitle > span,
+.product-card > span {
+    width: 15%;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.product-card > span {
+    width: 20%;
+}
+
 .title-active {
     background: #FFC0BD;
     border-radius: 10px;
+}
+
+.product-card {
+    width: 75%;
+    background: #FFC0BD;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.product.product-card {
+    width: 60%;
+}
+
+.product-card > span > a > img {
+    width: 100%;
+}
+
+.product-card > img {
+    width: 200px;
 }
 
 .pink-frame {
@@ -274,12 +321,22 @@ h2.ans {
 .login-container,
 .signin-container,
 .member-info,
-.QA {
+.QA,
+.products-container,
+.product-list-container {
     margin-top: 30px;
     background-color: #fff;
     border-radius: 8px;
     display: flex;
     justify-content: center;
+}
+
+.products-container,
+.product-list-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+    gap: 20px;
 }
 
 .login-container > div {
@@ -361,12 +418,12 @@ input::placeholder {
     display: flex;
   }
   
-  .slides img {
+  .slides a img {
     width: 100%;
     display: none;
   }
   
-  .slides img:first-child {
+  .slides a img:first-child {
     display: block;
   }
   
@@ -388,3 +445,129 @@ input::placeholder {
   .next {
     right: 0;
   }
+/* 圖片輪播 end */
+
+.review-form.pink-frame {
+    width: 75%;
+    padding: 30px;
+    align-items: start;
+    gap: 10px;
+}
+
+.review-form > div > .pink-frame-submit {
+    font-size: 22px;
+    align-self: end;
+}
+
+.review-form > div > textarea {
+    width: 100%;
+}
+
+.review-title {
+    font-size: 22px;
+    color: white;
+    background: #925E78;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.review-stars {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+}
+
+.stars {
+    color: white;
+    font-size: 32px;
+}
+
+.stars.active {
+    color: #FFD700;
+}
+
+.review-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-button {
+    font-size: 22px;
+    position: relative;
+    left: 33%;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.browse-history-container {
+    margin: 30px 15% 150px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.history-item {
+    background: #FFC0BD;
+    padding: 20px;
+    width: 25%;
+}
+
+.history-item > a > img {
+    width: 100%;
+}
+
+.product-list-title {
+    color: #925E78;
+    background: #FFC0BD;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin-top: 30px;
+}
+
+.product-list-title-div {
+    width: 64%;
+    padding: 0 30px;
+    display: flex;
+}
+
+.product-details {
+    margin-left: 50px;
+    width: 60%;
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #925E78;
+    margin: 0;
+}
+
+.product-content {
+    color: white;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product-subinfo {
+    display: -webkit-inline-box;
+    -webkit-box-pack: end;
+    width: 100%;
+}
+
+.price-storage {
+    display: inline-flex;
+    height: 100%;
+}
+
+.price-storage > p {
+    font-size: 18px;
+    color: #925E78;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 15px;
+}

@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="buysite.css">
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("main-menu");
-            menu.classList.toggle("active");
-            console.log("Menu Toggled");
-        }
-    </script>
-    
+    <script src="buysite.js"></script>
     <title>小魔女の解憂鋪</title>
 </head>
 
@@ -30,9 +23,13 @@
             </div>
             <div class="user-area">
                 <div class="user-buttons">
-                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
+                    <li><a href="#" onclick="checkLogin('member')"><img src="img/user.png" alt="會員專區"></a></li>
                 </div>
-                <li><img src="img/bag.png" alt="購物袋"></li>
+
+                <div class="buybag-buttons">
+                    <li><a href="#" onclick="checkLogin('buybag')"><img src="img/bag.png" alt="購物袋"></a></li>
+                </div>
+
                 <div class="menu-icon" onclick="toggleMenu()">
                     <li >&#9776;</li>
                 </div>
@@ -69,7 +66,7 @@
                     <input type="password" id="password" name="password" required><br>
                 </span>
 
-                <button type="submit" class="pink-frame-submit">登入</button>
+                <button type="submit" class="pink-frame-submit" onclick="login()">登入</button>
             </form>
         </div>
     </div>

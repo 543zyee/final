@@ -24,11 +24,11 @@
             </div>
             <div class="user-area">
                 <div class="user-buttons">
-                    <li><a href="login.html"><img src="img/user.png" alt="會員專區"></a></li>
+                    <li><a href="#" onclick="checkLogin('member')"><img src="img/user.png" alt="會員專區"></a></li>
                 </div>
 
                 <div class="buybag-buttons">
-                    <li><a href="buybag.html"><img src="img/bag.png" alt="購物袋"></a></li>
+                    <li><a href="#" onclick="checkLogin('buybag')"><img src="img/bag.png" alt="購物袋"></a></li>
                 </div>
 
                 <div class="menu-icon" onclick="toggleMenu()">
@@ -67,7 +67,7 @@
             </span>
 
             <span class="product">
-                <img src="img/fly.jpg" alt="飛行蝴蝶結">
+                <a href="product_gogogo.html"><img src="img/fly.jpg" alt="飛行蝴蝶結"></a>
             </span>
 
             <span>
@@ -83,29 +83,31 @@
         <div class="review-form pink-frame">
             <span class="review-title" disabled>商品評論</span>
 
-           <!-- 用戶評價及評論的區域 -->
-            <div class="review-section" id="review-section">
-                <!-- 這是用戶已評價及評論的內容 -->
-                <p>評價：<span id="rating">5</span>星</p>
-                <p>評論：這是一個很棒的商品！</p>
+            <!-- 用戶評價及評論的區域 -->
+            <div class="review-section reviews-container" id="review-section">
+                <div class="review">
+                    <!-- 這是用戶已評價及評論的內容 -->
+                    <!-- 一開始不會顯示任何東西，當評價送出之後會直接顯示在這邊，並且隱藏編輯星星跟評價的輸入框 -->
+                    <!-- <p>評價：<span id="rating">0</span>星</p>
+                    <p>評論：這是一個很棒的商品！</p> -->
+                </div>
             </div>
+
             <!-- 用戶評價及評論的輸入板塊 -->
-            <div class="review-input" id="review-input" style="display: none;">
-                <label for="star-rating">評價：</label>
-                <select id="star-rating" onchange="updateStarRating()">
+            <div class="review-input" id="review-input">
+                <label>評價：</label>
                     
-                    <div class="star-rating" id="star-rating">
-                        <span class="star" onclick="setRating(1)">&#9733;</span>
-                        <span class="star" onclick="setRating(2)">&#9733;</span>
-                        <span class="star" onclick="setRating(3)">&#9733;</span>
-                        <span class="star" onclick="setRating(4)">&#9733;</span>
-                        <span class="star" onclick="setRating(5)">&#9733;</span>
-                    </div>
+                <span id="star-rating" class="star-rating review-stars" current-rate="0">
+                    <div class="stars" onclick="setRating(1)">&#9733;</div>
+                    <div class="stars" onclick="setRating(2)">&#9733;</div>
+                    <div class="stars" onclick="setRating(3)">&#9733;</div>
+                    <div class="stars" onclick="setRating(4)">&#9733;</div>
+                    <div class="stars" onclick="setRating(5)">&#9733;</div>
+                </span>
                     
-                </select>
-                <label for="comment">評論：</label>
-                <textarea id="comment"></textarea>
-                <button onclick="submitReview()">提交評價</button>
+                <label>評論：</label>
+                <textarea id="comment" rows="3"></textarea>
+                <button onclick="submitReview()" class="pink-frame-submit">提交評價</button>
             </div>
 
         </div>
