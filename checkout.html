@@ -46,44 +46,41 @@
         <div class="active-menu-bg"></div>
     </header>
 
-    <section class="store-description">
-        <div class="store-description-img">
-            <img class="description-pho" src="img/logo-homepage.png">
-        </div>
+        <h1>訂單資訊</h1>
 
-        <div class="store-description-content">
-            <h1>小魔女の解憂鋪</h1>
-            <P>小魔女的道具，解決你所有的煩憂</P>
-            <p>不管是有所煩憂，還是想要想要體驗超能力，小魔女的道具都能一一滿足你。<br>
-                    我們想要成為你煩憂時第一個想起的人，用我們一點點的能力去幫助你！</p>
-        </div>
-    </section>
+        <form action="#" method="post" onsubmit="submitOrder()">
+            <label for="orderNumber">訂單編號:</label>
+            <input type="text" id="orderNumber" name="orderNumber" readonly value="123456">
 
-    <section class="recommended-products">
-        <h1>小魔女の推薦</h1>
+            <label for="memberNumber">會員編號:</label>
+            <input type="text" id="memberNumber" name="memberNumber" readonly value="789012">
 
-        <!-- 商品輪播 -->
-        <div class="carousel">
-            <div class="slides">
-              <a href="product_superhero.html"><img src="img/energy.jpg" alt="Image"></a>
-              <a href="product_superhero.html"><img src="img/invisible.jpg" alt="Image"></a>
-              <a href="product_superhero.html"><img src="img/diving.jpg" alt="Image"></a>
-              <a href="product_memories.html"><img src="img/forget.jpg" alt="Image"></a>
-              <a href="product_memories.html"><img src="img/time.jpg" alt="Image"></a>
-              <a href="product_gogogo.html"><img src="img/fly.jpg" alt="Image"></a>
-              <a href="product_gogogo.html"><img src="img/anywhere.jpg" alt="Image"></a>
-              <!-- 更多圖片 -->
-            </div>
-            <button class="prev" onclick="prevSlide()">❮</button>
-            <button class="next" onclick="nextSlide()">❯</button>
-      </div>
-    </section>
+            <label for="products">所購買產品:</label>
+            <textarea id="products" name="products" readonly>產品A x 1\n產品B x 2</textarea>
 
-    <section>
-        <div id="visitorCounter">
-            <p>訪客數：<span id="count">0</span></p>
-        </div>    
-    </section>
+            <label for="totalPrice">總價:</label>
+            <input type="text" id="totalPrice" name="totalPrice" readonly value="3000">
+
+            <label for="paymentMethod">付款方式:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="convenienceStore">超商取貨</option>
+                <option value="cashOnDelivery">貨到付款</option>
+                <option value="creditCard">信用卡</option>
+            </select>
+
+            <label for="recipientName">收件姓名:</label>
+            <input type="text" id="recipientName" name="recipientName" required>
+
+            <label for="recipientPhone">收件電話:</label>
+            <input type="tel" id="recipientPhone" name="recipientPhone" required>
+
+            <label for="recipientAddress">收件住址:</label>
+            <textarea id="recipientAddress" name="recipientAddress" required></textarea>
+
+            <br>
+
+            <input type="submit" value="確認訂單">
+        </form>
 
     <footer>
         <p>&copy; 聯繫我們<br>
@@ -91,10 +88,6 @@
             電話:0123456789<br>
             電郵:01234.45689@gmail.com
         </p>
-
-        <div class="about-us-button">
-            <a href="about.html"><img src="img/about_us.png"></a>
-        </div>
 
     </footer>
 </body>
