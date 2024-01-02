@@ -546,6 +546,7 @@ button {/*V*/
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    align-items: center;
 }
 
 .pink-frame-submit,
