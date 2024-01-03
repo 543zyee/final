@@ -55,6 +55,7 @@
             <span>訂單編號</span>
             <span>商品</span>
             <span>金額</span>
+            <span>數量</span>
         </h1>
 
         <div class="purchase-history-container products-container">
@@ -74,41 +75,49 @@
                 <span>
                     <p>$250.00</p>
                 </span>
+
+                <span>
+                    <p>1</p>
+                </span>
+
+                <h1> 
+                    總金額
+                </h1>
+
             </div>
 
-        <form action="#" method="post" onsubmit="submitOrder()">
-            <label for="orderNumber">訂單編號:</label>
-            <input type="text" id="orderNumber" name="orderNumber" readonly value="123456">
+            <h1 class="page-subtitle"> 
+                <span>總金額</span>
+                <span>付款方式</span>
+            </h1>
 
-            <label for="memberNumber">會員編號:</label>
-            <input type="text" id="memberNumber" name="memberNumber" readonly value="789012">
+            <div class="purchase-history-container products-container">
+                <div class="purchase-card product-card">
 
-            <label for="products">所購買產品:</label>
-            <textarea id="products" name="products" readonly>產品A x 1\n產品B x 2</textarea>
+                    <div class="total-section">
+                        <span><p>$100</p></span>
+                    </div>
 
-            <label for="totalPrice">總價:</label>
-            <input type="text" id="totalPrice" name="totalPrice" readonly value="3000">
+                    <div class="payment-section">
+                        <span><label><input type="radio" name="payment" value="credit-card"> 信用卡<br></label></span>
+                        <span><label><input type="radio" name="payment" value="cash-on-delivery"> 貨到付款<br></label></span>
+                    </div>
 
-            <label for="paymentMethod">付款方式:</label>
-            <select id="paymentMethod" name="paymentMethod">
-                <option value="convenienceStore">超商取貨</option>
-                <option value="cashOnDelivery">貨到付款</option>
-                <option value="creditCard">信用卡</option>
-            </select>
+                    <div id="creditCardInfo">
+                        <!-- 這裡可以添加信用卡相關的表單元素 -->
+                    </div>
 
-            <label for="recipientName">收件姓名:</label>
-            <input type="text" id="recipientName" name="recipientName" required>
+                    <div id="cashOnDeliveryInfo">
+                        <label>姓名: <input type="text" id="fullName"></label><br>
+                        <label>電話: <input type="text" id="phoneNumber"></label><br>
+                        <label>住址: <input type="text" id="address"></label><br>
+                    </div>
+                </div>
+            </div>
 
-            <label for="recipientPhone">收件電話:</label>
-            <input type="tel" id="recipientPhone" name="recipientPhone" required>
+                <button class="checkout-button" onclick="showNotification()">結帳</button>
 
-            <label for="recipientAddress">收件住址:</label>
-            <textarea id="recipientAddress" name="recipientAddress" required></textarea>
-
-            <br>
-
-            <input type="submit" value="確認訂單">
-        </form>
+            </div>
 
         <footer>
         <p>&copy; 聯繫我們<br>

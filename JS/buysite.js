@@ -176,3 +176,45 @@ function submitOrder() {
     alert('訂單已提交！');
     return false;
 }
+
+//結帳
+//數量對應總金額
+
+document.querySelectorAll('.quantity-input').forEach(function (input) {// 在每個商品的數量變化時更新總金額
+    input.addEventListener('input', updateTotalAmount);
+});
+
+function updateTotalAmount() {// 獲得所有商品的數量和價格
+    var quantities = document.querySelectorAll('.quantity-input');
+    var prices = document.querySelectorAll('.product-details p');
+    var totalAmount = 0;
+    for (var i = 0; i < quantities.length; i++) {// 計算總金額
+        var quantity = parseInt(quantities[i].value);
+        var price = parseInt(prices[i].textContent.replace(/\D/g, '')); // 移除價格中的非數字字符
+        totalAmount += quantity * price;
+    }
+    
+    document.getElementById('totalAmount').textContent = '$' + totalAmount;// 更新顯示總金額
+}
+
+updateTotalAmount();// 初始化時更新總金額
+
+//付款方式
+document.getElementById('creditCardInfo').style.display = 'none';// 在載入時隱藏信用卡資訊
+document.getElementById('cashOnDeliveryInfo').style.display = 'none';
+document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio) {// 監聽付款方式的變化
+    radio.addEventListener('change', updatePaymentInfo);
+});
+
+function updatePaymentInfo() {
+    var creditCardInfo = document.getElementById('creditCardInfo');
+    var cashOnDeliveryInfo = document.getElementById('cashOnDeliveryInfo');
+    if (document.querySelector('input[name="paymentMethod"]:checked').value === 'creditCard') {// 根據選擇的付款方式顯示或隱藏相應的資訊
+        creditCardInfo.style.display = 'block';
+        cashOnDeliveryInfo.style.display = 'none';
+    } else {
+        creditCardInfo.style.display = 'none';
+        cashOnDeliveryInfo.style.display = 'block';
+    }
+}
+updatePaymentInfo();// 初始化時執行一次更新付款資訊
