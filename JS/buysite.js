@@ -7,8 +7,7 @@ function redirectToPage(pageName) {
 }
 
 //頁首&頁尾&選單
-// 切換選單可見性
-function toggleMenu() {
+function toggleMenu() {// 切換選單可見性
     var menu = document.getElementById("main-menu");
     menu.classList.toggle("active");
     console.log("Menu Toggled");
@@ -90,6 +89,11 @@ function incrementVisitorCount() {
 incrementVisitorCount();
 
 //Login
+// 登入邏輯處理
+function login() {
+    event.preventDefault();// 阻止表單默認提交
+}
+
 // 檢查登入狀態
 function checkLoginStatus() {
     return sessionStorage.getItem('isLogin') === 'true';
@@ -113,24 +117,25 @@ function checkLogin(functionName) {
 }
 
 //Signin
+// 表單驗證邏輯處理
+function validateForm() {
+    event.preventDefault();// 阻止表單默認提交
+}
+
 //密碼和確認密碼
 function validateForm() {
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
-
-    // 修改正則表達式
-    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;// 修改表達式
     if (!passwordRegex.test(password)) {
         alert('密碼必須包含大、小寫英文字母與數字，且至少 8 個字符');
         return false;
     }
-
     // 檢查確認密碼是否相符
     if (password !== confirmPassword) {
         alert('密碼及確認密碼不符');
         return false;
     }
-
     alert('註冊成功！');
     window.location.href = 'meber.html';
     return false;
@@ -164,8 +169,7 @@ function checkReviewStatus() {
 }
 
 // 設置評分
-function setRating(rating) {
-    // 這裡的邏輯保持不變
+function setRating(rating) {// 這裡的邏輯保持不變
 }
 
 // 初始化時檢查評論狀態
@@ -179,12 +183,12 @@ function submitOrder() {
 
 //結帳
 //數量對應總金額
-
 document.querySelectorAll('.quantity-input').forEach(function (input) {// 在每個商品的數量變化時更新總金額
     input.addEventListener('input', updateTotalAmount);
 });
 
-function updateTotalAmount() {// 獲得所有商品的數量和價格
+// 獲得所有商品的數量和價格
+function updateTotalAmount() {
     var quantities = document.querySelectorAll('.quantity-input');
     var prices = document.querySelectorAll('.product-details p');
     var totalAmount = 0;
