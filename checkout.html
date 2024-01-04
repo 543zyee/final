@@ -58,64 +58,70 @@
             <span>數量</span>
         </h1>
 
-        <div class="purchase-history-container products-container">
-            <div class="purchase-card product-card">
-                <span>
-                    #XXXX
-                </span>
-
-                <span>
-                    <p>#12345</p>
-                </span>
-    
-                <span class="product">
-                    <a href="product_gogogo.html"><img src="img/fly.jpg" alt="飛行蝴蝶結"></a>
-                </span>
-    
-                <span>
-                    <p>$250.00</p>
-                </span>
-
-                <span>
-                    <p>1</p>
-                </span>
-
-                <h1> 
-                    總金額
-                </h1>
-
-            </div>
-
-            <h1 class="page-subtitle"> 
-                <span>總金額</span>
-                <span>付款方式</span>
-            </h1>
-
             <div class="purchase-history-container products-container">
                 <div class="purchase-card product-card">
+                    <span>
+                        #XXXX
+                    </span>
 
-                    <div class="total-section">
-                        <span><p>$100</p></span>
+                    <span>
+                        <p>#12345</p>
+                    </span>
+        
+                    <span class="product">
+                        <a href="product_gogogo.html"><img src="img/fly.jpg" alt="飛行蝴蝶結"></a>
+                    </span>
+        
+                    <span>
+                        <p>$250.00</p>
+                    </span>
+
+                    <span>
+                        <p>1</p>
+                    </span>
+
+                    <span class="total-amount">
+                        <p>總金額: $250.00</p>
+                    </span>
+
+                </div>
+                <div class="purchase-card product-card">
+                    <div class="product-list-title-div">
+                        <h1 class="product-list-title">付款方式</h1>
                     </div>
-
-                    <div class="payment-section">
-                        <span><label><input type="radio" name="payment" value="credit-card"> 信用卡<br></label></span>
-                        <span><label><input type="radio" name="payment" value="cash-on-delivery"> 貨到付款<br></label></span>
+                    <select id="paymentMethod" onchange="showPaymentFields()">
+                        <option value="creditCard">信用卡</option>
+                        <option value="cashOnDelivery">貨到付款</option>
+                    </select>
+        
+                    <!-- 信用卡付款信息 -->
+                    <div id="creditCardFields" style="display: none;">
+                        <label for="cardNumber">卡號：</label>
+                        <input type="text" id="cardNumber" name="cardNumber"><br>
+        
+                        <label for="cardName">姓名：</label>
+                        <input type="text" id="cardName" name="cardName"><br>
+        
+                        <label for="phone">電話：</label>
+                        <input type="text" id="phone" name="phone"><br>
+        
+                        <label for="address">住址：</label>
+                        <input type="text" id="address" name="address"><br>
                     </div>
-
-                    <div id="creditCardInfo">
-                        <!-- 這裡可以添加信用卡相關的表單元素 -->
-                    </div>
-
-                    <div id="cashOnDeliveryInfo">
-                        <label>姓名: <input type="text" id="fullName"></label><br>
-                        <label>電話: <input type="text" id="phoneNumber"></label><br>
-                        <label>住址: <input type="text" id="address"></label><br>
+        
+                    <!-- 货到付款信息 -->
+                    <div id="cashOnDeliveryFields" style="display: none;">
+                        <label for="name">姓名：</label>
+                        <input type="text" id="name" name="name"><br>
+        
+                        <label for="phoneCOD">電話：</label>
+                        <input type="text" id="phoneCOD" name="phoneCOD"><br>
+        
+                        <label for="addressCOD">住址：</label>
+                        <input type="text" id="addressCOD" name="addressCOD"><br>
                     </div>
                 </div>
-            </div>
-
-                <button class="checkout-button" onclick="showNotification()">結帳</button>
+                    <button class="checkout-button" onclick="showNotification()">結帳</button>
 
             </div>
 

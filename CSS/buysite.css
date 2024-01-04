@@ -418,7 +418,7 @@ h2.ans {/*V*/
     margin: 5px 0;
 }
 
-.product-subinfo {/*V*/
+.product-subinfo{/*V*/
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -440,12 +440,14 @@ h2.ans {/*V*/
     width: 200px;
 }
 
-.price-storage {/*V*/
+.price-storage,
+.total-amount 
+{/*V*/
     display: flex;
     flex-direction: column;
 }
 
-.price-storage > p {/*V*/
+.price-storage,.total-amount > p {/*V*/
     font-size: 18px;
     color: #925E78;
     font-weight: bold;
@@ -465,6 +467,29 @@ h2.ans {/*V*/
     width: 64%;
     padding: 0 30px;
     display: flex;
+}
+
+/*checkout*/
+.purchase-card {
+    position: relative;
+    justify-content: center;
+}
+
+.total-amount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #FFC0BD;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+#paymentMethod {
+    position: absolute;
+    border: 20px;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-top: 40px;
 }
 
 /* 登入、註冊表單樣式 */

@@ -191,6 +191,47 @@ document.addEventListener('click', function (event) {
     }
 });
 
+// 模拟商品数据，包括评分和评论数量
+const productData = [
+    { id: 1, rating: 4.5, reviews: 20 },
+    { id: 2, rating: 3.8, reviews: 15 },
+    { id: 3, rating: 5.0, reviews: 30 },
+    // 在这里继续添加其他商品的数据
+];
+
+// 获取所有商品卡片
+document.addEventListener('DOMContentLoaded', function () {
+    const productCards = document.querySelectorAll('.product-card');
+    // 遍历每个商品卡片
+    productCards.forEach(function (card, index) {
+        const productInfo = productData[index];// 获取对应商品的数据
+        
+        const ratingElement = document.createElement('p');// 在商品卡片中添加平均评分和评论数量的元素
+        ratingElement.classList.add('product-rating');
+        ratingElement.textContent = `平均評分: ${productInfo.rating}星`;
+
+        const reviewsElement = document.createElement('p');
+        reviewsElement.classList.add('product-reviews');
+        reviewsElement.textContent = `評論數: ${productInfo.reviews}`;
+
+        // 将评分和评论数量的元素添加到商品卡片中
+        card.querySelector('.product-details').appendChild(ratingElement);
+        card.querySelector('.product-details').appendChild(reviewsElement);
+
+        // 添加点击事件监听器，点击进入评价预览（这里假设有一个名为 showReviews 的函数用于显示评价预览）
+        card.addEventListener('click', function () {
+            showReviews(productInfo.id); // 传递商品ID至 showReviews 函数
+        });
+    });
+});
+
+// 示例函数，用于显示评价预览，你需要根据实际情况实现
+function showReviews(productId) {
+    console.log(`显示商品ID为 ${productId} 的评价预览`);
+    // 在这里添加显示评价预览的逻辑
+}
+
+
 //buybag購物袋
 function submitOrder() {
     alert('訂單已提交！');
@@ -220,21 +261,17 @@ function updateTotalAmount() {
 updateTotalAmount();// 初始化時更新總金額
 
 //付款方式
-document.getElementById('creditCardInfo').style.display = 'none';// 在載入時隱藏信用卡資訊
-document.getElementById('cashOnDeliveryInfo').style.display = 'none';
-document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio) {// 監聽付款方式的變化
-    radio.addEventListener('change', updatePaymentInfo);
-});
+function showPaymentFields() {
+    var paymentMethod = document.getElementById("paymentMethod").value;
+    
+    // 隐藏所有的输入字段
+    document.getElementById("creditCardFields").style.display = "none";
+    document.getElementById("cashOnDeliveryFields").style.display = "none";
 
-function updatePaymentInfo() {
-    var creditCardInfo = document.getElementById('creditCardInfo');
-    var cashOnDeliveryInfo = document.getElementById('cashOnDeliveryInfo');
-    if (document.querySelector('input[name="paymentMethod"]:checked').value === 'creditCard') {// 根據選擇的付款方式顯示或隱藏相應的資訊
-        creditCardInfo.style.display = 'block';
-        cashOnDeliveryInfo.style.display = 'none';
-    } else {
-        creditCardInfo.style.display = 'none';
-        cashOnDeliveryInfo.style.display = 'block';
+    // 根据选择的付款方式显示相应的输入字段
+    if (paymentMethod === "creditCard") {
+        document.getElementById("creditCardFields").style.display = "block";
+    } else if (paymentMethod === "cashOnDelivery") {
+        document.getElementById("cashOnDeliveryFields").style.display = "block";
     }
 }
-updatePaymentInfo();// 初始化時執行一次更新付款資訊
