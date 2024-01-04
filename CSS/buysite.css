@@ -656,6 +656,29 @@ button {/*V*/
     border-radius: 10px;
 }
 
+.quantity-controls {
+    display: flex;
+    align-items: baseline;
+}
+
+.quantity-button {
+    background-color: #925E78;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-button.decrease {
+    margin-right: 5px;
+}
+
+.quantity-button.increase {
+    margin-left: 5px;
+}
+
+
 /*瀏覽紀錄*/
 .browse-history-container {/*V*/
     margin: 30px 15% 150px 15%;

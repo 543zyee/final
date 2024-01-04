@@ -238,6 +238,26 @@ function submitOrder() {
     return false;
 }
 
+function increaseQuantity() {
+    var quantityElement = document.querySelector('.quantity');
+    var currentQuantity = parseInt(quantityElement.innerText);
+    quantityElement.innerText = currentQuantity + 1;
+}
+
+function decreaseQuantity() {
+    var quantityElement = document.querySelector('.quantity');
+    var currentQuantity = parseInt(quantityElement.innerText);
+    
+    if (currentQuantity > 1) {
+        quantityElement.innerText = currentQuantity - 1;
+    }
+}
+
+function deleteItem() {
+    var cartItem = document.querySelector('.cart-item');
+    cartItem.remove();
+}
+
 //checkout結帳
 //數量對應總金額
 document.querySelectorAll('.quantity-input').forEach(function (input) {// 在每個商品的數量變化時更新總金額
@@ -274,4 +294,9 @@ function showPaymentFields() {
     } else if (paymentMethod === "cashOnDelivery") {
         document.getElementById("cashOnDeliveryFields").style.display = "block";
     }
+}
+
+function showNotification() {
+    alert('訂單已提交！');
+    return false;
 }

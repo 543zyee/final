@@ -51,59 +51,35 @@
     </h1>
 
     <h1 class="page-subtitle"> 
-        <span>商品名稱</span>
         <span>商品</span>
-        <span>數量</span>
-        <span>單價</span>
         <span>金額</span>
+        <span>數量</span>
+        <span>修改</span>
     </h1>
 
     <div class="cart-container products-container">
         <div class="cart-item product-card">
-            <span>
-                <p>商品名稱 1</p>
-            </span>
 
             <span class="product">
                 <a href="product_gogogo.html"><img src="img/fly.jpg" alt="Product 1"></a>
             </span>
 
             <span>
-                <p>2</p>
+                <p class="item-price">$250</p>
+            </span>
+
+            <span class="quantity-controls">
+                <button class="quantity-button decrease" onclick="decreaseQuantity()">-</button>
+                <p class="quantity">2</p>
+                <button class="quantity-button increase" onclick="increaseQuantity()">+</button>
             </span>
 
             <span>
-                <p>$20.00</p>
-            </span>
-
-            <span>
-                <p class="item-price">$40.00</p>
+                <button class="delete-button order-button" onclick="deleteItem()">刪除</button>
             </span>
         </div>
 
-        <div class="cart-item product-card">
-            <span>
-                <p>商品名稱 2</p>
-            </span>
-
-            <span class="product">
-                <a href="product_superhero.html"><img src="img/invisible.jpg" alt="Product 2"></a>
-            </span>
-
-            <span>
-                <p>1</p>
-            </span>
-
-            <span>
-                <p>$30.00</p>
-            </span>
-
-            <span>
-                <p class="item-price">$30.00</p>
-            </span>
-        </div>
-
-        <button class="order-button"><a href="checkout.html">結帳</a></button>
+        <button class="order-button" onclick="submitOrder()"><a href="checkout.html">結帳</a></button>
     </div>
 
         <footer>
