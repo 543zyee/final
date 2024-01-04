@@ -401,14 +401,18 @@ h2.ans {/*V*/
     width: 60%;
 }
 
-.product-title {/*V*/
+.product-title,
+.user-title 
+{/*V*/
     font-size: 22px;
     font-weight: bold;
     color: #925E78;
     margin: 0;
 }
 
-.product-content {/*V*/
+.product-content,
+.review-content
+ {/*V*/
     color: white;
     font-weight: bold;
     margin: 5px 0;

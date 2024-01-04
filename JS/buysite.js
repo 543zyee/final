@@ -31,7 +31,7 @@ window.addEventListener('scroll', function() {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-//首頁
+//buysite首頁
 
 // 圖片輪播
 let slideIndex = 0;
@@ -88,7 +88,7 @@ function incrementVisitorCount() {
 // 在頁面載入時自動執行增加訪客計數的函數
 incrementVisitorCount();
 
-//Login
+//Login登入
 // 登入邏輯處理
 function login() {
     event.preventDefault();// 阻止表單默認提交
@@ -116,7 +116,7 @@ function checkLogin(functionName) {
     }
 }
 
-//Signin
+//Signin註冊
 // 表單驗證邏輯處理
 function validateForm() {
     event.preventDefault();// 阻止表單默認提交
@@ -141,7 +141,13 @@ function validateForm() {
     return false;
     }
 
-//purchase_history_review
+//meber會員資料
+//表單處理邏輯處理    
+function submitForm() {
+    event.preventDefault();// 阻止表單默認提交
+}
+
+//purchase_history_review歷史購物清單
 // 提交評論函數
 function submitReview() {
     var rating = document.getElementById("star-rating").getAttribute("current-rate");
@@ -175,13 +181,23 @@ function setRating(rating) {// 這裡的邏輯保持不變
 // 初始化時檢查評論狀態
 checkReviewStatus();
 
-//購物袋
+
+//product-card商品
+document.addEventListener('click', function (event) {
+    if (event.target && event.target.matches('.review-count')) {
+        // 获取商品对应的 ID 或其他标识，然后根据需要跳转到评论预览页面
+        // 例如：redirectToReviewPreview(productId);
+        console.log("Redirect to review preview for product");
+    }
+});
+
+//buybag購物袋
 function submitOrder() {
     alert('訂單已提交！');
     return false;
 }
 
-//結帳
+//checkout結帳
 //數量對應總金額
 document.querySelectorAll('.quantity-input').forEach(function (input) {// 在每個商品的數量變化時更新總金額
     input.addEventListener('input', updateTotalAmount);
